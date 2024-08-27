@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/** ENLACES **/
+a {
+  text-decoration: none;
+  font-size: 25px;
+  margin: 10px;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: coral;
+}
+
+
+/** Texto **/
+p{
+  font-size: 2vw;
+}
+
+h2{
+  font-size: 7vw;
+}
+
+
+#main p, .gloves p{
+  background-color: rgb(248, 248, 255,0.7);
+  font-size: 3vw;
+  margin: 10px;
+}
+
+
+#main {
+  display: flex;
+  padding: 30px;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  background-image: url(../img/main-picture.jpg);
+  padding-top: 56.25%;
+}
+
+#main p{
+  position: absolute;
+  top: 0;
+}
+
+
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "bloques"
+    "B"
+    "C"
+    "D"
+    "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+header {
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+header img {
+  height: 100px;
+  width: 120px;
+}
+
+
+
+#one {
+  background-image: url(../img/Allison-block.jpg);
+}
+
+#two {
+  background-image: url(../img/Carina-block.jpg);
+}
+
+#three {
+  background-image: url(../img/Hugo-block.jpg);
+}
+
+#four {
+  background-image: url(../img/Livakovic-block.jpg);
+}
+
+#fourBlocks {
+  grid-area: "bloques";
+  display: grid;
+}
+
+.imagen-prueba {
+  height: 20vh;
+  width: 100%;
+}
+
+.imagen-prueba video {
+  width: 100%;
+  height: 100%;
+}
+
+.gloves {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gloves h2 {
+  padding: 10px;
+  text-align: justify;
+  -webkit-text-stroke: 1px white;
+}
+
+/* calc(100% / 2);*/
+#Attrakt {
+  background-image: url(../img/Attrakt-bg.jpg);
+}
+
+#Pure-contact {
+  background-image: url(../img/Pure-contact-bg.jpg);
+}
+
+#SpeedBump {
+  background-image: url(../img/SpeedBump-bg.jpg);
+}
+
+footer {
+  display: flex;
+  background-color: beige;
+  padding: 20px;
+  justify-content: center;
+}
+/*.others > * {
+  height: calc(100% / 2);
+  width: 100vw;
+}*/
+
+@media (min-width: 321px) {
+  #fourBlocks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #fourBlocks > * {
+    width: 50%;
+  }
+
+  .gloves h2,
+  .gloves p {
+    padding: 10px;
+  }
+
+  .imagen-prueba {
+    height: 20vh;
+    width: 30vw;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  #fourBlocks > * {
+    width: calc(100% / 4);
+  }
+
+  #fourBlocks {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .gloves {
+    padding: 30px;
+  }
+}
+/**Configuraciones**/
+.border {
+  border: solid;
+}
+
+.img-settings{
+  background-size: cover; /* Mantiene la imagen completa */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-padding{
+  padding-top: 56.25%;
+}
+
